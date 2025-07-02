@@ -2,7 +2,7 @@ WITH raw_listings AS (
  SELECT
  *
  FROM
- TECHFRIDAY.RAW.RAW_LISTINGS
+ {{source("UDEMY","listings")}}
 )
 SELECT
  id AS listing_id,
