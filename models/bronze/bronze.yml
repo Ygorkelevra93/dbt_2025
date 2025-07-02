@@ -1,0 +1,9 @@
+models:
+    - name: person
+      description: "A starter dbt model"
+      columns:
+          - name: BUSINESSENTITYID
+            description: "The primary key for this table"
+            tests:
+                - unique
+                - not_null
