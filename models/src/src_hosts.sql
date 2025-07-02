@@ -2,7 +2,7 @@ WITH raw_hosts AS (
  SELECT
  *
  FROM
- TECHFRIDAY.RAW.RAW_HOSTS
+ {{source("UDEMY","hosts")}}
 )
 SELECT
  id AS host_id,
