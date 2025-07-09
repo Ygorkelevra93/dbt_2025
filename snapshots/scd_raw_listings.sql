@@ -1,4 +1,4 @@
-{% snapshot scd_raw_listings %}
+ {% snapshot scd_raw_listings %}
 {{
  config(
  target_schema='DEV',
