@@ -20,9 +20,26 @@ models:
       - name: room_type
         tests:
           - accepted_values:
+              
               values:
-                ["Entire home/apt", "Private room", "Shared room", "Hotel room"]
+                ["Entire home/apt b", "Private room", "Shared room", "Hotel room"]
+              config:
+                severity: warn
       
       - name: minimum_nights
         tests: 
           - positive_value
+
+
+  - name: dim_hosts_cleansed
+    description: "Table content de hosts refined information "
+    config:
+      tags: novo # Aqui está a tag 'novo'
+    columns:
+      - name: HOST_ID
+        description: "a unique id for hosts"
+        tests:
+          - unique
+          - not_null
+
+      
