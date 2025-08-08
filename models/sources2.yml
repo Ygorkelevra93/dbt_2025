@@ -3,28 +3,31 @@ sources:
     database: TECHFRIDAY
     schema: RAW
     tables:
-    - name: listings
-      identifier: raw_listings 
-    
-    - name: hosts
-      identifier: raw_hosts
-    - name: reviews
-      identifier: raw_reviews
-      loaded_at_field: date
-      freshness:
-       warn_after: {count: 1, period: hour}
-       error_after: {count: 24, period: hour}
-  
+      - name: listings
+        identifier: raw_listings
+
+      - name: hosts
+        identifier: raw_hosts
+      - name: reviews
+        identifier: raw_reviews
+        loaded_at_field: date
+        freshness:
+          warn_after: { count: 1, period: hour }
+          error_after: { count: 24, period: hour }
+
   - name: jaffle_shop
     database: TECHFRIDAY
     schema: RAW
     tables:
-    - name: orders
-      identifier: JAFFLE_SHOP_ORDERS
-    
-    - name: customers
-      identifier: JAFFLE_SHOP_CUSTOMERS
+      - name: orders
+        identifier: JAFFLE_SHOP_ORDERS
 
-    - name: payments
-      identifier: STRIPE_PAYMENTS 
+      - name: customers
+        identifier: JAFFLE_SHOP_CUSTOMERS
 
+  - name: stripe
+    database: TECHFRIDAY
+    schema: RAW
+    tables:
+      - name: payments
+        identifier: STRIPE_PAYMENTS
