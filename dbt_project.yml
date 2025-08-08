@@ -43,3 +43,14 @@ models:
       +materialized: table
     src: 
       +materialized: ephemeral
+
+vars:
+  user_name: dbt_project
+
+# within `models:`
+  stripe:
+    enabled: true
+    materialized: view
+    vars:
+      #insert the location of your stripe_events table here as 'schema.table'
+      events_table: 'stripe.stripe_events'

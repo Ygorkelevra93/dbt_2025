@@ -14,3 +14,17 @@ sources:
       freshness:
        warn_after: {count: 1, period: hour}
        error_after: {count: 24, period: hour}
+  
+  - name: jaffle_shop
+    database: TECHFRIDAY
+    schema: RAW
+    tables:
+    - name: orders
+      identifier: JAFFLE_SHOP_ORDERS
+    
+    - name: customers
+      identifier: JAFFLE_SHOP_CUSTOMERS
+
+    - name: payments
+      identifier: STRIPE_PAYMENTS 
+
